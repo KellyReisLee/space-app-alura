@@ -6,14 +6,13 @@ import ItemSideBar from './ItemSideBar'
 
 
 
+
 const ListStyled = styled.ul`
 padding: 0;
 margin: 0;
 width: 230px;
 
 `
-
-
 
 const SideBar = () => {
   const [selectedItem, setSelectedItem] = useState('Início');
@@ -24,7 +23,7 @@ const SideBar = () => {
         <ListStyled>
           {
             listItems.map((item) => {
-              return <ItemSideBar item={item} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
+              return <ItemSideBar key={item.name} item={item} selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
             })
           }
 

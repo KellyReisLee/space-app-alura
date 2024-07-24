@@ -5,8 +5,8 @@ import titleImage from '../../assets/banner.png'
 const ContainerTitle = styled.div`
 color: whitesmoke;
 background: url(${titleImage});
-width: 80%;
-height: 15rem;
+width: 100%;
+height: 18rem;
 display: flex;
 border-radius: 20px;
 align-items: center;
@@ -14,7 +14,7 @@ padding: 0 3rem;
 `
 
 const Text = styled.div`
-width: 300px;
+width: 230px;
 
 `
 

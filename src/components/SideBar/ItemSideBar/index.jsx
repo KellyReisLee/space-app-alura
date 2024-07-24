@@ -6,7 +6,7 @@ const SidebarItem = styled.li`
   align-items: center;
   padding: 10px 20px;
   cursor: pointer;
-  color: ${props => props.active ? '#bfa2ea' : '#e9e4e4'};
+  color: ${props => props.$active === 'true' ? '#bfa2ea' : '#e9e4e4'};
   font-family: ${props => props.active ? 'GandhiSansBold' : 'GandhiSansRegular'};
   gap: 1rem;
   letter-spacing: 0.7px;
@@ -28,8 +28,8 @@ const ItemSideBar = ({ item, selectedItem, setSelectedItem }) => {
   return (
     <SidebarItem
       key={item.name}
-      active={item.name === selectedItem}
-      onClick={() => setSelectedItem(item.name)}>
+      $active={(item.name === selectedItem)}
+      onClick={() => setSelectedItem(item.name).toString()}>
       <img src={item.name === selectedItem ? item.ativo : item.inativo} alt={item.name} />
       {item.name}
     </SidebarItem>

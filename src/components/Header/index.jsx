@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../../../public/logo.png'
 import Input from '../InputSearch'
 
 const HeaderStyled = styled.header`
-padding: 30px 2rem;
+padding: 30px 0;
 display: flex;
 justify-content: space-between;
 
@@ -17,7 +16,7 @@ img{
 const Header = () => {
   return (
     <HeaderStyled>
-      <img src={logo} alt='logo' />
+      <img src={'/logo.png'} alt='logo' />
       <Input />
 
     </HeaderStyled>
