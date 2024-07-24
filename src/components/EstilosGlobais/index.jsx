@@ -18,20 +18,19 @@ const EstilosGlobais = createGlobalStyle`
   font-family: 'GandhiSansBold';
   src: local('Gandhi Sans Bold'), local('GandhiSansBold'), url('/fonts/GandhiSans-Bold.otf');
 }
+
 #root{
+  margin: 0;
   padding: 0;
   text-align: start;
 }
-
 html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
-  font-family: GandhiSansRegular;
 }
 body {
-  
+  margin: 0;
   min-height: 100vh;
-  
 }
 main {
   display: block;
@@ -47,10 +46,6 @@ hr {
 }
 a {
   background-color: transparent;
-}
-
-li{
-  list-style: none;
 }
 abbr[title] {
   border-bottom: none; 
@@ -172,7 +167,6 @@ template {
 [hidden] {
   display: none;
 }
-
 `
 
 export default EstilosGlobais

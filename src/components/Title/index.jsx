@@ -6,7 +6,7 @@ const ContainerTitle = styled.div`
 color: whitesmoke;
 background: url(${titleImage});
 width: 100%;
-height: 18rem;
+height: 20rem;
 display: flex;
 border-radius: 20px;
 align-items: center;
