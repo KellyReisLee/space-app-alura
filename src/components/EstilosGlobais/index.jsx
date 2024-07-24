@@ -6,6 +6,7 @@ import 'normalize.css';
 const EstilosGlobais = createGlobalStyle`
 #root{
   padding: 0;
+  text-align: start;
 }
 
 html {
@@ -30,6 +31,10 @@ hr {
 }
 a {
   background-color: transparent;
+}
+
+li{
+  list-style: none;
 }
 abbr[title] {
   border-bottom: none; 
