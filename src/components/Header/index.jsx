@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../../../public/imagens/logo.png'
+import logo from '../../../public/logo.png'
 import Input from '../InputSearch'
 
 const HeaderStyled = styled.header`

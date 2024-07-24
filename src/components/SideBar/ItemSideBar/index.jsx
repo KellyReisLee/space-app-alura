@@ -1,21 +1,38 @@
-import React from 'react'
 import styled from 'styled-components'
 
 
-const ListStyledItem = styled.li`
-text-decoration: none;
+const SidebarItem = styled.li`
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: ${props => props.active ? '#bfa2ea' : '#e9e4e4'};
+  font-family: ${props => props.active ? 'GandhiSansBold' : 'GandhiSansRegular'};
+  gap: 1rem;
+  letter-spacing: 0.7px;
+  font-size: ${props => props.active ? '20px' : '18px'};
+  background-color: transparent;
+  transition: all 0.1s, color 0.3s;
 
-`
 
-const ItemSideBar = ({ children, icon }) => {
+
+  /* &:hover {
+    color: aliceblue;
+
+  } */
+`;
+
+const ItemSideBar = ({ item, selectedItem, setSelectedItem }) => {
+
+
   return (
-    <ListStyledItem>
-      <a href=''>
-        <img src={icon} alt='' />
-        {children}
-
-      </a>
-    </ListStyledItem>
+    <SidebarItem
+      key={item.name}
+      active={item.name === selectedItem}
+      onClick={() => setSelectedItem(item.name)}>
+      <img src={item.name === selectedItem ? item.ativo : item.inativo} alt={item.name} />
+      {item.name}
+    </SidebarItem>
   )
 }
 

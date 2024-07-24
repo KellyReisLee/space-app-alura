@@ -6,6 +6,7 @@ import { IoSearch } from "react-icons/io5";
 const SearchContainer = styled.div`
   position: relative;
     display: inline-block;
+    width: 40%;
 `;
 
 
@@ -17,8 +18,8 @@ const InputSearch = styled.input`
     border-color: #C98CF1;
     background: transparent;
     box-sizing: border-box;
-    width: 566px;
-   
+    width: 100%;
+
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
