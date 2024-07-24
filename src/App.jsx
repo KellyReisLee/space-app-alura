@@ -3,6 +3,7 @@ import './App.css'
 import styled from 'styled-components'
 import EstilosGlobais from './components/EstilosGlobais'
 import 'normalize.css';
+import Header from './components/Header';
 
 
 const FundoGradiente = styled.div`
@@ -18,6 +19,7 @@ function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais />
+      <Header />
     </FundoGradiente>
   )
 }
