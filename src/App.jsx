@@ -5,6 +5,7 @@ import EstilosGlobais from './components/EstilosGlobais'
 import 'normalize.css';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
+import Title from './components/Title';
 
 
 const FundoGradiente = styled.div`
@@ -22,6 +23,7 @@ function App() {
       <EstilosGlobais />
       <Header />
       <SideBar />
+      <Title />
     </FundoGradiente>
   )
 }
