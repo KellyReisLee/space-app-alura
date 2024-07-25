@@ -7,10 +7,15 @@ import Card from '../Card'
 import { media } from '../styles/mixins'
 
 
-
 const GaleryContainer = styled.div`
 display: flex;
 gap: 1rem;
+
+
+${media.mobile`
+flex-direction: column;
+
+`}
 `
 
 const FluidContainer = styled.section`
@@ -19,12 +24,11 @@ flex-grow: 1;
 
 const CardsContainer = styled.div`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 gap: 1rem;
 
 
 ${media.mobile`
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 gap: 0.7rem;
 `}
 

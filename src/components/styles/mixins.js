@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 
 export const breakpoints = {
   mobile: '800px',
+
 };
 
 export const media = {

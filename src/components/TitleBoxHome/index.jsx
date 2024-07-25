@@ -2,22 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import titleImage from '../../assets/banner.png'
 import Title from '../Title'
+import { media } from '../styles/mixins'
 
 const ContainerTitle = styled.div`
 background: url(${titleImage});
 position: relative;
-width: 100%;
-height: 20rem;
 display: flex;
+height: 20rem;
+display: grid;
 border-radius: 20px;
 align-items: center;
-
 `
 
 const Text = styled.div`
 position: absolute;
-left: 60px;
 width: 230px;
+left: 60px;
+
 
 `
 

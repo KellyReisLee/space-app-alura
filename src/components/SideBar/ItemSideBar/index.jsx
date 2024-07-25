@@ -6,9 +6,9 @@ const SidebarItem = styled.li`
   align-items: center;
   padding: 10px 20px;
   cursor: pointer;
-  color: ${props => props.$active === 'true' ? '#bfa2ea' : '#e9e4e4'};
+  color: ${props => props.$active ? '#d0b3fb' : '#e9e4e4'};
   font-family: ${props => props.active ? 'GandhiSansBold' : 'GandhiSansRegular'};
-  gap: 1rem;
+  gap: 0.7rem;
   letter-spacing: 0.7px;
   font-size: ${props => props.active ? '20px' : '18px'};
   background-color: transparent;

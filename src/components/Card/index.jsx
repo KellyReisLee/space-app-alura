@@ -86,7 +86,6 @@ const Card = ({ foto, footerColor, textSizeTitle, textSizeDec }) => {
           <ButtonIcon>
             <Icon src={expandir} alt='' />
           </ButtonIcon>
-
         </ContainerIcons>
       </TextContent>
     </CardContainer>

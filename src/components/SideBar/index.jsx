@@ -8,7 +8,7 @@ import { media } from '../styles/mixins'
 const ListStyled = styled.ul`
 padding: 0;
 margin: 0;
-width: 230px;
+width: 220px;
 height: 100vh;
 
 

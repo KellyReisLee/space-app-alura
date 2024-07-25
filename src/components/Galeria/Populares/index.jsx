@@ -12,7 +12,7 @@ gap: 1rem;
 
 
 ${media.mobile`
-grid-template-columns: 180px;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 gap: 0.7rem;
 `}
 

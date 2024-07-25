@@ -15,8 +15,9 @@ const FundoGradiente = styled.div`
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  display: block;
+  display: flex;
   padding: 0 3rem;
+  padding-bottom: 3rem;
   
 `
 
@@ -24,6 +25,8 @@ const AppContainer = styled.div`
   width: 1400px;
   margin: 0 auto;
   max-width: 100%; 
+  display: grid;
+  
 
 `
 
