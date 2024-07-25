@@ -5,9 +5,10 @@ import EstilosGlobais from './components/EstilosGlobais'
 import 'normalize.css';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
-import Title from './components/TitleBoxHome';
 import Galeria from './components/Galeria';
 import TitleBoxHome from './components/TitleBoxHome';
+import photos from './photos.json'
+import { useState } from 'react';
 
 const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -36,9 +37,10 @@ width: 100%;
 
 
 
-function App() {
-  return (
+const App = () => {
+  const [fotosGaleria, setFotosGaleria] = useState(photos);
 
+  return (
     <FundoGradiente>
       <EstilosGlobais />
       <AppContainer>
@@ -47,7 +49,7 @@ function App() {
           <SideBar />
           <RightContainer>
             <TitleBoxHome />
-            <Galeria />
+            <Galeria fotos={fotosGaleria} />
           </RightContainer>
         </MainContainer>
 
