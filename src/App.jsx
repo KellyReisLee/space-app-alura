@@ -16,6 +16,7 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
   overflow: hidden;
   display: block;
+  padding: 0 3rem;
   
 `
 

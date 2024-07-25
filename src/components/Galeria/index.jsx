@@ -4,6 +4,7 @@ import Tags from './Tags'
 import styled from 'styled-components'
 import Populares from './Populares'
 import Card from '../Card'
+import { media } from '../styles/mixins'
 
 
 
@@ -18,8 +19,14 @@ flex-grow: 1;
 
 const CardsContainer = styled.div`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 gap: 1rem;
+
+
+${media.mobile`
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 0.7rem;
+`}
 
 `
 

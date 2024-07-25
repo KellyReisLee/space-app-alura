@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import tagsList from './tags-list'
+import { media } from '../../styles/mixins'
 
 
 const Container = styled.div`
@@ -8,6 +9,7 @@ display: flex;
 color: aliceblue;
 margin: 2.2rem 0;
 align-items: center;
+
 `
 
 const ListUl = styled.ul`
@@ -17,8 +19,12 @@ gap: 0.8rem;
 
 const TagsText = styled.h3`
 color: #D9D9D9;
-    font-size: 1.rem;
-    margin: 0;
+font-size: 1.rem;
+margin: 0;
+
+${media.mobile`
+font-size: 0.85rem;
+`}
 `
 
 const Navigation = styled.nav`
@@ -34,7 +40,18 @@ border-radius: 1rem;
 border: 4px solid ${props => props.$borderColor ? '#dacaf3' : 'gray'};
 transition: all 0.3s;
 
+
+
+${media.mobile`
+font-size: 1rem;
+font-size: 0.8rem;
+background-color: gray;
+padding: 0.4rem 1.5rem;
+`}
+
 `
+
+
 
 const Tags = () => {
   const [isActive, setIsActive] = useState('Estrelas');

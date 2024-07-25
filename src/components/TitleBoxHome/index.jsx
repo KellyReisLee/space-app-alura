@@ -18,6 +18,7 @@ const Text = styled.div`
 position: absolute;
 left: 60px;
 width: 230px;
+
 `
 
 
@@ -25,7 +26,7 @@ const TitleBoxHome = () => {
   return (
     <ContainerTitle>
       <Text>
-        <Title >A galeria mais completa de fotos do espaço!</Title>
+        <Title>A galeria mais completa de fotos do espaço!</Title>
       </Text>
     </ContainerTitle>
   )

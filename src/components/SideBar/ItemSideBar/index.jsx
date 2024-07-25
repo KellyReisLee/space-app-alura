@@ -14,7 +14,20 @@ const SidebarItem = styled.li`
   background-color: transparent;
   transition: all 0.1s, color 0.3s;
 
+  p{
+    margin: 0;
+    padding: 0;
+  }
 
+
+  @media (max-width: 800px) {
+    p{
+      display: none;
+    }
+  }
+  /* @media (max-width: 480px) {
+    background-color: lightgreen;
+  } */
 
   /* &:hover {
     color: aliceblue;
@@ -30,7 +43,7 @@ const ItemSideBar = ({ item, selectedItem, setSelectedItem }) => {
       $active={(item.name === selectedItem)}
       onClick={() => setSelectedItem(item.name)}>
       <img src={item.name === selectedItem ? item.ativo : item.inativo} alt={item.name} />
-      {item.name}
+      <p>{item.name}</p>
     </SidebarItem>
   )
 }

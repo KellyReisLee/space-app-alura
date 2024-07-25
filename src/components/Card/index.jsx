@@ -5,11 +5,13 @@ import favoritoAtivo from '../../assets/icones/favorito-ativo.png'
 import favoritoInativo from '../../assets/icones/favorito.png'
 
 const CardContainer = styled.figure`
-background-color: #041026;
+
+background-color: ${props => props.$footerColor || '#041026'};
 width: 100%;
 border-radius: 10px;
 margin: 0;
 position: relative;
+
 
 
 img{
@@ -26,8 +28,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0.6rem 0.5rem;
-font-size: 1rem;
-color: whitesmoke;
+
+
 `
 const ContainerInfo = styled.div`
 width: 100%;
@@ -41,12 +43,13 @@ justify-content: end;
 
 const CardTitle = styled.h4`
 margin: 0;
-font-size: 0.9rem;
+font-size: ${props => props.$textSizeTitle || '1rem'};
 color: #e1e1e1;
+
 `
 const CardDesc = styled.p`
 margin: 0;
-font-size: 0.8rem;
+font-size: ${props => props.$textSizeDec || '0.8rem'};
 color: #b1b1b1;
 `
 const Icon = styled.img`
@@ -67,14 +70,14 @@ img{
 
 
 
-const Card = ({ foto }) => {
+const Card = ({ foto, footerColor, textSizeTitle, textSizeDec }) => {
   return (
-    <CardContainer>
-      <img src={foto.path} alt='' />
-      <TextContent>
+    <CardContainer $footerColor={footerColor}>
+      <img src={foto.path} alt='galaxie images' />
+      <TextContent  >
         <ContainerInfo>
-          <CardTitle> {foto.titulo}</CardTitle>
-          <CardDesc> {foto.fonte}</CardDesc>
+          <CardTitle $textSizeTitle={textSizeTitle} > {foto.titulo}</CardTitle>
+          <CardDesc $textSizeDec={textSizeDec}> {foto.fonte}</CardDesc>
         </ContainerInfo>
         <ContainerIcons>
           <ButtonIcon>

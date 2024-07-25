@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-
 import listItems from './listaItems'
 import ItemSideBar from './ItemSideBar'
-
-
+import { media } from '../styles/mixins'
 
 
 const ListStyled = styled.ul`
@@ -13,6 +11,10 @@ margin: 0;
 width: 230px;
 height: 100vh;
 
+
+${media.mobile`
+width: fit-content;
+`}
 `
 
 const SideBar = () => {
