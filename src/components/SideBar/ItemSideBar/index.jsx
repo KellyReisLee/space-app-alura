@@ -24,7 +24,6 @@ const SidebarItem = styled.li`
 
 const ItemSideBar = ({ item, selectedItem, setSelectedItem }) => {
 
-
   return (
     <SidebarItem
       key={item.name}

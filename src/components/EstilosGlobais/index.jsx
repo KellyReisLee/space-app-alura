@@ -31,6 +31,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: 'GandhiSansRegular';
 }
 main {
   display: block;
@@ -46,6 +47,9 @@ hr {
 }
 a {
   background-color: transparent;
+}
+li{
+  list-style: none;
 }
 abbr[title] {
   border-bottom: none; 

@@ -11,6 +11,7 @@ const ListStyled = styled.ul`
 padding: 0;
 margin: 0;
 width: 230px;
+height: 100vh;
 
 `
 

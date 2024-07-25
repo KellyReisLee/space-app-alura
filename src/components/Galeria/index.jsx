@@ -1,11 +1,14 @@
 import React from 'react'
+import Title from '../Title'
+import Tags from './Tags'
 
 const Galeria = () => {
   return (
     <div>
-      <h2>Navegue pela Galeria.</h2>
+      <Tags />
+      <Title colorTxt='#bfa2ea'>Navegue pela Galeria.</Title>
 
-    </div>
+    </div >
   )
 }
 
