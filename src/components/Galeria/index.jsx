@@ -3,14 +3,24 @@ import Title from '../Title'
 import Tags from './Tags'
 import styled from 'styled-components'
 import Populares from './Populares'
+import Card from '../Card'
+
 
 
 const GaleryContainer = styled.div`
 display: flex;
+gap: 1rem;
 `
 
 const FluidContainer = styled.section`
 flex-grow: 1;
+`
+
+const CardsContainer = styled.div`
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+gap: 1rem;
+
 `
 
 const Galeria = ({ fotos = [] }) => {
@@ -19,25 +29,16 @@ const Galeria = ({ fotos = [] }) => {
       <Tags />
       <GaleryContainer>
         <FluidContainer>
-          <Title colorTxt='#bfa2ea'>Navegue pela Galeria.</Title>
-          {
-            fotos.map((foto) => {
-              return (
-                <div key={foto.id}>
-                  <img src={foto.path} alt='' />
-                  <div>
-                    <div>
-                      {foto.titulo}
-                      {foto.fonte}
-                    </div>
-                    <div>
-                      icon1 icon2
-                    </div>
-                  </div>
-                </div>
-              )
-            })
-          }
+          <Title textSize={'1.4rem'} colorTxt='#bfa2ea'>Navegue pela Galeria</Title>
+          <CardsContainer>
+            {
+              fotos.map((foto) => {
+                return (
+                  <Card key={foto.id} foto={foto} />
+                )
+              })
+            }
+          </CardsContainer>
         </FluidContainer>
         <Populares />
       </GaleryContainer>

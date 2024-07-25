@@ -25,7 +25,7 @@ const TitleBoxHome = () => {
   return (
     <ContainerTitle>
       <Text>
-        <Title>A galeria mais completa de fotos do espaço!</Title>
+        <Title >A galeria mais completa de fotos do espaço!</Title>
       </Text>
     </ContainerTitle>
   )

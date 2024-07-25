@@ -28,7 +28,7 @@ const ItemSideBar = ({ item, selectedItem, setSelectedItem }) => {
     <SidebarItem
       key={item.name}
       $active={(item.name === selectedItem)}
-      onClick={() => setSelectedItem(item.name).toString()}>
+      onClick={() => setSelectedItem(item.name)}>
       <img src={item.name === selectedItem ? item.ativo : item.inativo} alt={item.name} />
       {item.name}
     </SidebarItem>

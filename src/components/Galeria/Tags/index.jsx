@@ -17,7 +17,7 @@ gap: 0.8rem;
 
 const TagsText = styled.h3`
 color: #D9D9D9;
-    font-size: 24px;
+    font-size: 1.rem;
     margin: 0;
 `
 
@@ -27,9 +27,9 @@ margin: 0;
 
 const TagsItem = styled.li`
 cursor: pointer;
-font-size: 1.5rem;
+font-size: 0.8rem;
 background-color: gray;
-padding: 0.6rem 1.2rem;
+padding: 0.5rem 1.1rem;
 border-radius: 1rem;
 border: 4px solid ${props => props.$borderColor ? '#dacaf3' : 'gray'};
 transition: all 0.3s;
