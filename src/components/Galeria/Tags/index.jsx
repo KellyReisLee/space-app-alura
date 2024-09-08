@@ -23,6 +23,7 @@ const ListUl = styled.ul`
 width: 100%;
 display: flex;
 justify-content: start;
+align-items: start;
 gap: 0.8rem;
 `
 
@@ -42,7 +43,6 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 0;
 
 
 
