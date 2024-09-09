@@ -41,32 +41,37 @@ justify-content: end;
 
 
 const Icon = styled.img`
+width: 25px;
+height: 15px;
 `
 
-const ButtonIcon = styled.button`
+const ButtonIcon = styled.div`
 cursor: pointer;
 background-color: transparent;
 border: none;
-height: 100%;
-width: 27px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0.3rem;
 
-img{
-  width: 100%;
-}
 `
 
 
 
 
 const Card = ({ foto, footerColor, aoZoomFoto }) => {
-
+  const [icons, setIcons] = useState(false)
+  const icon = icons ? favoritoAtivo : favoritoInativo
   return (
     <CardContainer $footerColor={footerColor}>
       <Image foto={foto} />
       <TextContent >
         <ContainerIcons>
           <ButtonIcon>
-            <Icon src={favoritoAtivo} alt='icone favorito' />
+            <Icon
+              src={icon}
+              alt='icone favorito'
+              onClick={() => setIcons(!icons)} />
           </ButtonIcon>
           <ButtonIcon >
             <Icon
