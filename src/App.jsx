@@ -44,10 +44,11 @@ width: 100%;
 
 const App = () => {
   const [fotosGaleria, setFotosGaleria] = useState(photos);
+  const [fotoSelecionada, setFotoSelecionada] = useState(null)
+
 
   return (
     <FundoGradiente>
-
       <EstilosGlobais />
       <AppContainer>
         <Header />
@@ -55,11 +56,16 @@ const App = () => {
           <SideBar />
           <RightContainer>
             <TitleBoxHome />
-            <Galeria fotos={fotosGaleria} />
+            <Galeria
+              aoFotoSelecionada={foto => setFotoSelecionada(foto)}
+              fotos={fotosGaleria}
+
+
+            />
           </RightContainer>
         </MainContainer>
       </AppContainer>
-      <ModalZoom />
+      <ModalZoom foto={fotoSelecionada} aoFechar={() => setFotoSelecionada(null)} />
     </FundoGradiente>
 
   )

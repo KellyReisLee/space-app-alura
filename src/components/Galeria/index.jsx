@@ -34,7 +34,9 @@ gap: 0.7rem;
 
 `
 
-const Galeria = ({ fotos = [] }) => {
+
+
+const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
   return (
     <div>
       <Tags />
@@ -45,7 +47,12 @@ const Galeria = ({ fotos = [] }) => {
             {
               fotos.map((foto) => {
                 return (
-                  <Card key={foto.id} foto={foto} />
+                  <Card
+                    key={foto.id}
+                    foto={foto}
+                    aoZoomFoto={aoFotoSelecionada}
+
+                  />
                 )
               })
             }
